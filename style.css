@@ -3,8 +3,9 @@ body {
     color: #FFF;
 }
 h1 {
-  font-size: 35px;
-  text-align: center;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercasse;
     
 }
 p {
