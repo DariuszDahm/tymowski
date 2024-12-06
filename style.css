@@ -14,7 +14,7 @@ p {
     padding-bottom: 15px;
 }
 section {
-    width: 70%;
+    width: 60%;
     text-align: justify;
-
+    margin: 10px auto;
 }
