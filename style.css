@@ -6,7 +6,7 @@ h1 {
     font-size: 145px;
     text-align: center;
     text-transform: uppercase;
-    
+    text-shadow: 4px 3px 4px rgba(66, 68, 90, 1);    
 }
 p {
   text-align: center;
