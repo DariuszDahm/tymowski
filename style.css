@@ -12,3 +12,8 @@ p {
     text-align: center;
     font-size: 18px;    
 }
+section {
+    width: 70%;
+    text-align: justify;
+
+}
