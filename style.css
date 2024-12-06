@@ -9,6 +9,6 @@ h1 {
     text-shadow: 4px 3px 4px rgba(66, 68, 90, 1);    
 }
 p {
-  text-align: center;
-
+    text-align: center;
+    font-size: 18px;    
 }
