@@ -15,6 +15,9 @@ p {
 }
 section {
     width: 60%;
-    text-align: justify;
     margin: 10px auto;
 }
+section p {
+    text-align: justify;
+}
+    
