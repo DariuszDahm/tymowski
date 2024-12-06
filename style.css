@@ -13,10 +13,16 @@ p {
     font-size: 18px;   
     padding-bottom: 15px;
 }
+p .headline {
+    font-size: 22px;
+}    
 section {
     width: 60%;
     margin: 10px auto;
     text-align: justify;
 }
-
+section p {
+    text-align: justify;
+}
+    
     
