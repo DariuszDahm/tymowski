@@ -22,24 +22,23 @@
     {% endfor %}
 
 
-    <!-- Pagination links -->
-      <div class="pagination">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="previous">
-            Poprzednia
-          </a>
-        {% else %}
-          <span class="previous">Poprzednia</span>
-        {% endif %}
-        <span class="page_number ">
-          Page: {{ paginator.page }} of {{ paginator.total_pages }}
-        </span>
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="next">Następna</a>
-        {% else %}
-          <span class="next ">Następna</span>
-        {% endif %}
-      </div>
+    <!-- Nawigacja paginacji -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Poprzednia</a>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}"
+       class="{% if page == paginator.page %}active{% endif %}">
+      {{ page }}
+    </a>
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Następna &raquo;</a>
+  {% endif %}
+</div>
 
 </article>
 

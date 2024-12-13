@@ -33,10 +33,21 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-minifier
   # - jemoji #Odkomentuj to, aby zezwolić na używanie emoji w swoim poście
 
+# paginacja dla index.html
 paginate: 3
 paginate_path: "/blog/page/:num/"
+#paginate_path: "/blog/page:num/"
+
+# paginacja dla blog.html
+#pagination:
+#  enabled: true
+#  per_page: 3 # Liczba postów na stronie
+#  permalink: /blog/page/:num/ # Ścieżka do kolejnych stron
+#  collection: posts # Kolekcja postów
+# layout: blog # Layout do użycia na stronach z paginacją
 
 defaults:
   - scope:
@@ -44,15 +55,26 @@ defaults:
     values:
       layout: "default"
 
-defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      permalink: "/blog/:title/"
+      permalink: "/:title/"
 
+  #- scope:
+  #    path: "pages/blog.md"
+  #  values:
+  #    layout: "blog"
+  #    pagination: enabled
 
 collections:
   pages:
     output: true
     permalink: /:name/
+
+exclude:
+  - README.md
+  - CNAME
+  - package.json
+  - .gitignore
+  - LICENSE

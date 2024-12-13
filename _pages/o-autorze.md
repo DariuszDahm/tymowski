@@ -3,6 +3,7 @@ layout: page
 title: Marek Tymowski - Informacje o autorze
 description: Marek Tymowski - pisarz amator, copywriter. Marek Tymowski to specjalista SEO ze świeżym podejściem do marketingu sieciowego oraz reklam na stronach internetowych.
 index: index, follow
+compress_html: true
 ---
 
 <img class="avatar" src="/assets/img/martym.jpg" alt="{{ site.autor.name }}" style="float:right" />
