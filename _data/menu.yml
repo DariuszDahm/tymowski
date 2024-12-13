@@ -1,0 +1,11 @@
+- name: Home
+  url: /
+
+- name: Blog
+  url: /blog/
+
+- name: O autorze
+  url: /o-autorze/
+
+- name: Kontakt
+  url: /kontakt/

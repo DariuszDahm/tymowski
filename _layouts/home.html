@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "pl" }}">
+
+{% include head.html %}
+
+<body>
+  <div class="wrapper">
+
+    {% include header.html %}
+<div class="container">
+
+  <div class="box-left">
+    {{ content }}
+
+<article>
+
+      <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p> {{ post.excerpt }} </p>
+    <p class="author"> <span class="date">{{ post.data }}</span> </p>
+    {% endfor %}
+
+
+    <!-- Pagination links -->
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">
+            Poprzednia
+          </a>
+        {% else %}
+          <span class="previous">Poprzednia</span>
+        {% endif %}
+        <span class="page_number ">
+          Page: {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">Następna</a>
+        {% else %}
+          <span class="next ">Następna</span>
+        {% endif %}
+      </div>
+
+</article>
+
+
+
+    {% include footer.html %}  
+  </div>
+  <div class="box-right">
+      {% include sidebar.html %}  
+  </div>    
+
+</div>
+    
+
+  </div><!--end wrapper-->
+
+</body>
+
+</html>

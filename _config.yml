@@ -1,0 +1,58 @@
+# ustawienie strony
+lang: pl
+locale: pl
+
+title: Marek Tymowski - pisarz amator, copywriter
+description: Marek Tymowski - pisarz amator, copywriter. Marek Tymowski to specjalista SEO ze świeżym podejściem do marketingu sieciowego oraz reklam na stronach internetowych.
+
+url:
+baseurl:
+
+favicon: favicon.png
+
+# autor
+autor:
+  name: Marek Tymowski
+  email: kontakt@tymowski.tk
+  url:
+  avatar: /assets/img/ja2.webp
+
+# Build settings
+markdown: kramdown
+
+social_link:
+  twitter: mediatym
+  facebook: mediatym
+  instagram: mediatym
+  linkedin:
+  slideshare:
+  githab:
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  # - jemoji #Odkomentuj to, aby zezwolić na używanie emoji w swoim poście
+
+paginate: 3
+paginate_path: "/blog/page/:num/"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/blog/:title/"
+
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/

@@ -1,0 +1,28 @@
+<div class="sidebar">
+
+<div class="sidebar-panel">
+    <h3>Ostatnio dodane</h3>
+    <ul>
+        {% for post in site.posts limit: 5 %}
+
+        <li><a href="{{ post.url | relative_url }}">{{ post.title | strip_html | truncate: 30 }}</a></li>
+
+        {% endfor %}
+    </ul>
+
+
+</div>
+
+
+<div class="sidebar-panel">
+    <h3>Kategorie</h3>
+    <ul>
+        {% for category in site.categories %}
+            <li>
+            <a href="{{ '/categories/' | append: category[0] | relative_url }}">{{ category[0] }}</a> ({{ category[1].size }})
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</div>
